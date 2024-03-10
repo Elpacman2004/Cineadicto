@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+    <link rel="stylesheet" href='{% static "styles/estilos.css" %}'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="SignUp">Registro</a>
+            <a href="Login">Iniciar sesión</a>
+            <a href="Help">Ayuda</a>
+        </nav>
+        <selection class="textos-header">
+            <h1>Bienvenido, ¿Buscas la felicidad a tu alcance?</h1>
+        </selection>
+        <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C251.41,169.25 301.06,-54.75 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+    </header>    
+
+    <main class="container">
+        {% block content %} 
+        {% endblock %}
+    </main>
+</body>
+</html>

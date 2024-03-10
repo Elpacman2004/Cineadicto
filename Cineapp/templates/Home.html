@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineadicto home page</title>
+</head>
+
+<header>
+    {% extends 'layouts/Base.html' %}
+  </header>
+
+<body>
+    {% load static %}    
+
+    {% block content %}
+    <main>
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo">¡Bienvenido a CineFeliz!</h2>
+            <div class="contenedor-sobre-nosotros">
+                <img src="{% static 'Img/inico.jpg' %}" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    <h3><span>1</span>¿Qué esperas?</h3>
+                    <p>¡Bienvenido a nuestra plataforma de streaming de películas! Sumérgete en un mundo lleno de entretenimiento ilimitado con nuestra amplia selección de películas, desde los éxitos de taquilla más recientes hasta clásicos atemporales!.</p>
+                    <h3><span>2</span>¡Unete ahora!</h3>
+                    <p>Disfruta de contenido de alta calidad en cualquier momento y lugar, sin publicidad molesta. Además, actualizamos constantemente nuestro catálogo para ofrecerte las últimas novedades en la pantalla grande. Únete a nuestra comunidad de amantes del cine hoy mismo y haz que cada noche sea una experiencia cinematográfica inolvidable.</p>
+                </div>
+            </div>
+        </section>
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Portafolio</h2>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="{% static 'Img/breaking.jpg' %}" alt="">
+                        <div class="hover-galeria">
+                            <img src="" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'Img/dragon.jpg' %}" alt="">
+                        <div class="hover-galeria">
+                            <img src="" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'Img/scarface.jpg' %}" alt="">
+                        <div class="hover-galeria">
+                            <img src="" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'Img/rapidoy.jpg' %}" alt="">
+                        <div class="hover-galeria">
+                            <img src="" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'Img/monja2.jpg' %}" alt="">
+                        <div class="hover-galeria">
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'Img/blanca nieves.png' %}" alt="">
+                        <div class="hover-galeria">
+
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'Img/Thewarriorscover.jpg' %}" alt="">
+                        <div class="hover-galeria">
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'Img/image.jpg' %}" alt="">
+                        <div class="hover-galeria">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+   
+    </section>
+    <section class="about-services">
+        <div class="contenedor">
+            <h2 class="titulo">nuestros servicios</h2>
+            <div class="servicio-cont">
+                <div class="servicio-ind">
+                    <img src="{% static 'Img/peli1.jpg' %}" alt="">
+                    <h3>name</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quod minima ducimus?</p>
+                </div>
+                <div class="servicio-ind">
+                    <img src="{% static 'Img/peli2.jpg' %}" alt="">
+                    <h3>name</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quod minima ducimus?</p>
+                </div>
+                <div class="servicio-ind">
+                    <img src="{% static 'Img/peli3.jpg' %}" alt="">
+                    <h3>name</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quod minima ducimus?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>phone</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate et temporibus?</p>
+            </div>
+            <div class="content-foo">
+                <h4>phone</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate et temporibus?</p>
+            </div>
+            <div class="content-foo">
+                <h4>phone</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae cupiditate et temporibus?</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy;PricePalace | jord seb</h2>
+    </footer>
+    {% endblock %}
+</body>
+</html>

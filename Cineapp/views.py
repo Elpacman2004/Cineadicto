@@ -3,4 +3,13 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home (request):
-    return HttpResponse('<center>Remplazar el la parte donde dice "HttpResponse" con render(request, "Ubicacion de el archivo/Nombre de el archivo.html")<center/>')
+    return render(request, 'Home.html')
+
+def Test (request):
+    return render(request, 'layouts/Base.html')
+def Login (request):
+    return HttpResponse ('<h2>Remplazar el "HttpResponse" por un "render(request, "ruta/nombre de el archivo.html")"<h2/>')
+def SignUp (request):
+    return HttpResponse ('<h2>Remplazar el "HttpResponse" por un "render(request, "ruta/nombre de el archivo.html")"<h2/>')
+def Help (request):
+    return HttpResponse ('<h2>Remplazar el "HttpResponse" por un "render(request, "ruta/nombre de el archivo.html")"<h2/>')
