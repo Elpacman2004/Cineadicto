@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'MySite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'localhost',
+        'NAME': 'CineDB',
+        'USER': 'root',
+        'PASSWORD': '',
+        'PORT': '',
     }
 }
 
@@ -110,7 +114,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = True #les borro el proyecto??????
 
 
 # Static files (CSS, JavaScript, Images)

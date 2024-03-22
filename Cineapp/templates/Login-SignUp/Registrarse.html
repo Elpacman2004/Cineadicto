@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-image: url(img/Registro.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/974e9684a9.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo2.css">
+    <link rel="stylesheet" href="">
+    <title>Registrarse</title>
+
+</head>
+<body>
+    {% block content %}
+    <section>
+        <div class="contenedor">
+            <div class="formulario">
+                <form action="#">
+                    <h2>Crear Cuenta</h2>
+
+                    <div class="input-contenedor">
+                        <input type="name" required>
+                        <label for="#">Nombre</label>
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    
+                    <div class="input-contenedor">
+                        <input type="last name" required>
+                        <label for="#">Apellido</label>
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+
+                    <div class="input-contenedor">
+                        <input type="Email" required>
+                        <label for="#">Email</label>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div class="input-contenedor">
+                        <input type="Passwprd" required>
+                        <label for="#">Contraseña</label>
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+
+                    
+                    <div class="input-contenedor">
+                        <input type="Passwprd"  class="pass" id="pass" required>
+                        <label for="#">Confirmar Contraseña</label>
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    
+                </form>
+
+                <div>
+                    <button>Crear Cuenta</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+</body>
+</html>
