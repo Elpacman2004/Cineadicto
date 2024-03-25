@@ -31,7 +31,7 @@ header{
     height: 600px;
     background: #000046; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #001e46, #1cb5e0); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, hsla(212, 100%, 14%, 0.574), hsla(193, 78%, 49%, 0.87)), url("{% static 'fonodinicio.jpg' %}"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, hsla(212, 100%, 14%, 0.574), hsla(193, 78%, 49%, 0.87)), url("{% static 'Img/fonodinicio.jpg' %}"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   background-attachment: fixed;
   position: relative;

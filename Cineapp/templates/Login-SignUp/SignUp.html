@@ -1,17 +1,73 @@
-<h1>
-    Sing Up
-</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <style>
+        body {
+            background-image: url("{% static 'Img/Registro.jpg' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+    
 
-{{Error}}
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/974e9684a9.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "styles/estilo2.css" %}">
+    <link rel="stylesheet" href="">
+    <title>Registrarse</title>
 
-<form method='POST' >
+</head>
+<body>
+    <section>
+        <div class="contenedor">
+            <div class="formulario">
+                <form action="#">
+                    <h2>Crear Cuenta</h2>
 
-    {% csrf_token %}
+                    <div class="input-contenedor">
+                        <input type="name" required>
+                        <label for="#">Nombre</label>
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
+                    
+                    <div class="input-contenedor">
+                        <input type="last name" required>
+                        <label for="#">Apellido</label>
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>
 
-    {{ form.as_p }}
+                    <div class="input-contenedor">
+                        <input type="Email" required>
+                        <label for="#">Email</label>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
 
-    <button>
-        Sign Up
-    </button>
-</form>
+                    <div class="input-contenedor">
+                        <input type="Passwprd" required>
+                        <label for="#">Contraseña</label>
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
 
+                    
+                    <div class="input-contenedor">
+                        <input type="Passwprd"  class="pass" id="pass" required>
+                        <label for="#">Confirmar Contraseña</label>
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    
+                </form>
+
+                <div>
+                    <button>Crear Cuenta</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

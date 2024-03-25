@@ -25,3 +25,16 @@ class UsuarioUserPermissions(models.Model):
 
     def __str__(self):
         return f"{self.usuario.nombre} {self.usuario.apellidos} ({self.usuario.correo_electronico})"
+    
+class Pelicula(models.Model):
+    def __init__(self, id_pelicula, titulo, genero_id, fecha, duracion, sinopsis, director, **kwargs):
+        self.id_pelicula = id_pelicula
+        self.titulo = titulo
+        self.genero_id = genero_id
+        self.fecha = fecha
+        self.duracion = duracion
+        self.sinopsis = sinopsis
+        self.director = director
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)

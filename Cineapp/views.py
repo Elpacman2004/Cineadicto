@@ -16,7 +16,7 @@ def home (request):
 def Test (request):
     return render(request, 'Login-SignUp/Registrarse.html')
 def Login (request):
-    return HttpResponse ('<h2>Remplazar el "HttpResponse" por un "render(request, "ruta/nombre de el archivo.html")"<h2/>')
+    return render(request, "Login-SignUp/login.html")
 
 
 def SignUp(request):
