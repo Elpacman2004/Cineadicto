@@ -1,32 +1,39 @@
 from django.contrib.auth.models import Group 
 from datetime import datetime
 from django import forms
-from Cineapp.models import Usuarios
+from .models import Usuario, Pelicula
 from django.forms import ModelForm
 
-class RegistroForm(ModelForm):
+class UsuarioForm(forms.ModelForm):
     class Meta:
-        model = Usuarios
-        fields = ['nombre', 'email', 'password', 'fecha_nacimiento', 'preferencias'] 
-        class MyCustomField(forms.Field):
-            widgets = {
-                'nombre': forms.TextInput(attrs={'class': 'form-control'}),
-                'email': forms.EmailInput(attrs={'class': 'form-control'}),
-                'password': forms.PasswordInput(attrs={'class': 'form-control'}), 
-                'fecha_nacimiento': forms.DateInput(attrs={'class': 'form-control'}),
-                'preferencias': forms.Textarea(attrs={'class': 'form-control'}),  
+        model = Usuario
+        fields = ['username', 'name', 'email', 'password']
+        labels = {
+            'username': 'Nombre de usuario',
+            'name': 'Nombre',
+            'email': 'Correo electrónico',
+            'password': 'Contraseña',
         }
-    def clean(self):
-        super().clean()
-        errors = {}
-   
-        if self.cleaned_data['fecha_nacimiento'] > datetime.today() - datetime.timedelta(days=365 * 13):
-            errors['fecha_nacimiento'] = 'Debes ser mayor de 13 años.'
+        widgets = {
+            'username': forms.TextInput(attrs={'class': 'input-contenedor'}),
+            'name': forms.TextInput(attrs={'class': 'input-contenedor'}),
+            'email': forms.TextInput(attrs={'class': 'input-contenedor'}),
+            'password': forms.TextInput(attrs={'class': 'input-contenedor'}),
+        }
 
-        if Usuarios.objects.filter(email=self.cleaned_data['email']).exists():
-            errors['email'] = 'El correo electrónico ya está registrado.'
-
-        if errors:
-            raise forms.ValidationError(errors)
-
-        return self.cleaned_data
+class PeliculaForm(forms.ModelForm):
+    class Meta:
+        model = Pelicula
+        fields = ['title', 'description', 'genre', 'release_year', 'duration', 'director', 'lead_actors', 'poster', 'trailer', 'language']
+        labels = {
+            'title': 'Título',
+            'description': 'Descripción',
+            'genre': 'Género',
+            'release_year': 'Año de lanzamiento',
+            'duration': 'Duración (minutos)',
+            'director': 'Director',
+            'lead_actors': 'Actores principales',
+            'poster': 'Póster',
+            'trailer': 'Enlace al tráiler',
+            'language': 'Idioma',
+        }

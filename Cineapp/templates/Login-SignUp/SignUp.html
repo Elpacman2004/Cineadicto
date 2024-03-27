@@ -19,53 +19,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static "styles/estilo2.css" %}">
     <link rel="stylesheet" href="">
-    <title>Registrarse</title>
+    <title>SignUp</title>
 
 </head>
 <body>
     <section>
         <div class="contenedor">
             <div class="formulario">
-                <form action="#">
+                <form method='POST'>
+                    {% csrf_token %}
                     <h2>Crear Cuenta</h2>
 
                     <div class="input-contenedor">
-                        <input type="name" required>
-                        <label for="#">Nombre</label>
+                        <input type="text" name="username" class="input-contenedor" maxlength="250" required="" id="id_username">
+                        <label for="id_username">Nombre de usuario:</label>
                         <i class="fa-solid fa-circle-user"></i>
                     </div>
                     
                     <div class="input-contenedor">
-                        <input type="last name" required>
-                        <label for="#">Apellido</label>
+                        <input type="text" name="name" class="input-contenedor" maxlength="250" required="" id="id_name">
+                        <label for="id_name">Nombre:</label>
                         <i class="fa-solid fa-circle-user"></i>
                     </div>
 
                     <div class="input-contenedor">
-                        <input type="Email" required>
-                        <label for="#">Email</label>
+                        <input type="email" name="email" class="input-contenedor" maxlength="250" required="" id="id_email">
+                        <label for="id_email">Correo electrónico:</label>
                         <i class="fa-solid fa-envelope"></i>
                     </div>
 
                     <div class="input-contenedor">
-                        <input type="Passwprd" required>
-                        <label for="#">Contraseña</label>
+                        <input type="password" name="password1" class="input-contenedor" maxlength="250" required="" id="id_password1">
+                        <label for="id_password1">Contraseña:</label>
                         <i class="fa-solid fa-eye"></i>
                     </div>
 
                     
                     <div class="input-contenedor">
-                        <input type="Passwprd"  class="pass" id="pass" required>
-                        <label for="#">Confirmar Contraseña</label>
+                        <input type="password" name="password2" class="input-contenedor" maxlength="250" required="" id="id_password2">
+                        <label for="id_password2">Confirmar contraseña:</label>
                         <i class="fa-solid fa-eye"></i>
                     </div>
                     
-                </form>
-
-                <div>
                     <button>Crear Cuenta</button>
 
-                </div>
+                </form>
             </div>
         </div>
     </section>
