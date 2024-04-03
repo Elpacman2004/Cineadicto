@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "styles/estilo4.css" %}">
+    <title>Lista de Películas</title>
+
+</head>
+<body>
+    <h1>Lista de Películas</h1>
+    <div class="movies-container">
+        {% for pelicula in peliculas %}
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w200/{{ pelicula.poster_path }}" alt="{{ pelicula.title }}">
+                <h2>{{ pelicula.title }}</h2>
+                <p>{{ pelicula.overview }}</p>
+                <p>Fecha de estreno: {{ pelicula.release_date }}</p>
+                <p>Calificación: {{ pelicula.vote_average }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

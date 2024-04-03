@@ -30,6 +30,8 @@
                     {% csrf_token %}
                     <h2>Crear Cuenta</h2>
 
+                    <center><p class='Error'>{{Error}}<p></center>
+
                     <div class="input-contenedor">
                         <input type="text" name="username" class="input-contenedor" maxlength="250" required="" id="id_username">
                         <label for="id_username">Nombre de usuario:</label>

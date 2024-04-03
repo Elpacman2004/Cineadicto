@@ -22,21 +22,25 @@
 </head>
 <body>
     <section>
-        <div class="contenedor">
+        <div class="contenedorL">
             <div class="formulario">
-                <form action="#">
+                <form method='POST'>
                     <h2>Iniciar Sesion</h2>
 
+                    <p class='Error'><center>{{'Error'}}</center></p>
+
+                    {% csrf_token %}
+
                     <div class="input-contenedor">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" required>
-                        <label for="#">Email</label>
+                        <input type="text" name="username" class="input-contenedor" maxlength="250" required="" id="id_username">
+                        <label for="id_username">Nombre de usuario:</label>
+                        <i class="fa-solid fa-circle-user"></i>
                     </div>
                     
                     <div class="input-contenedor">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="passowrd" required>
-                        <label for="#">Contraseña</label>
+                        <input type="password" name="password" class="input-contenedor" maxlength="250" required="" id="id_password">
+                        <label for="id_password">Contraseña:</label>
+                        <i class="fa-solid fa-eye"></i>
                     </div>
 
                     <div class="olvidar">
@@ -44,10 +48,10 @@
                             <a href="#">Olvide Contraseña</a>
                         </label>
                     </div>
+                    <button>Acceder</button>
                 </form>
 
                 <div>
-                    <button>Acceder</button>
 
                     <div class="registrar">
                         <p>No tengo cuenta <a href="http://127.0.0.1:8000/SignUp">Crear una cuenta</a> </p>

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "styles/estilo5.css" %}">
+    <title>Buscar Peliculas</title>
+</head>
+<body>
+    <h1>Buscar Peliculas</h1>
+    <form action="{% url 'buscar-peliculas' %}" method="GET">
+        <label for="query">Buscar:</label>
+        <input type="text" id="query" name="query">
+        <button type="submit">Buscar</button>
+    </form>
+    <div class="results">
+        {% if peliculas %}
+            <h2>Resultados de la Búsqueda</h2>
+            <div class="movies-container">
+                {% for pelicula in peliculas %}
+                    <div class="movie-card">
+                        <!-- Agregar la imagen de la película -->
+                        <img src="{{ pelicula.imagen_url }}" alt="{{ pelicula.title }}">
+                        <h3>{{ pelicula.title }}</h3>
+                        <p>{{ pelicula.overview }}</p>
+                        <!-- Agregar un enlace para ver el trailer de la película -->
+                        {% if pelicula.trailer_url %}
+                            <a href="{{ pelicula.trailer_url }}" target="_blank">Ver trailer</a>
+                        {% else %}
+                            <p>No hay trailer disponible</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No se encontraron resultados</p>
+        {% endif %}
+    </div>
+</body>
+</html>

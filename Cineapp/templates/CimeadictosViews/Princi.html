@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static "styles/estilo3.css" %}">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+	<title>CineAdicto</title>
+</head>
+<body>
+
+    <style>
+        .pelicula-principal{
+            background-image: url("{% static 'Img/pagipri.jpg' %}");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 450px; 
+        }
+    </style>
+
+	<header>
+		<div class="contenedor">
+			<h2 class="logotipo">CineAdicto</h2>
+			<nav>
+				<a href="#" class="activo">Inicio</a>
+				<a href="#">Lista Películas</a>
+				<a href="buscar-peliculas/">Buscar Peliculas</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="pelicula-principal">
+			<div class="contenedor">
+				<h3 class="titulo">Interestellar</h3>
+				<p class="descripcion">
+					Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.
+				</p>
+				<button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
+				<button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
+			</div>
+		</div>
+
+		<div class="peliculas-recomendadas contenedor">
+			<div class="contenedor-titulo-controles">
+				<h3>Películas Recomendadas</h3>
+				<div class="indicadores"></div>
+			</div>
+
+			<div class="contenedor-principal">
+				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-carousel">
+					<div class="carousel">
+						<div class="pelicula">
+							<img src="{% static 'Img/gunfu.webp' %}" alt="">
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/poorth.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/Dune.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/openhim.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/niñogar.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/coraline.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/spider.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/bladrun.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/endgame.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/matrix.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/kime.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/badboy.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/dragones.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/quiet.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/seven.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/prox.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/corpse.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/bailarina.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/front.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/space.jpg' %}" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="{% static 'Img/chic.webp' %}" alt=""></a>
+						</div>
+					</div>
+				</div>
+
+				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+	</main>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="{% static "main.js" %}"></script>
+</html>
