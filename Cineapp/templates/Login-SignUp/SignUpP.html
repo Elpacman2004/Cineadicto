@@ -2,46 +2,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <style>
-        body {
-            background-image: url("{% static 'Img/Registro.jpg' %}");
+        body{
+            background-image: url("{% static 'Img/fondo.jpeg' %}");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
+            
         }
     </style>
-    
-
     <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/974e9684a9.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static "styles/estilo2.css" %}">
     <link rel="stylesheet" href="">
-    <title>SignUp</title>
+    <title>Login</title>
 
 </head>
 <body>
     <section>
-        <div class="contenedor">
+        <div class="contenedorL">
             <div class="formulario">
                 <form method='POST'>
+
                     {% csrf_token %}
-                    <h2>Crear Cuenta</h2>
-
-                    {{form.as_div}}
-
-                </form>
-
-                <div>
-                    <button>
-                        SignUp
-                    </button>
-
-                </div>
+                    
+                    
+                    <h2>Crear cuenta</h2>
+                    <center><p class='Error'>{{Error}}<p></center>
+                     {{form.as_p}}
+                    
+                    <button>Crear Cuenta</button>
+                
             </div>
         </div>
     </section>
 </body>
 </html>
+
+
+

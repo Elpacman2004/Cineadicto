@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +11,7 @@
 
 <header>
     {% extends 'layouts/Base.html' %}
-  </header>
+</header>
 
 <body>
     {% load static %}    
@@ -35,62 +34,21 @@
             <div class="contenedor">
                 <h2 class="titulo">Portafolio</h2>
                 <div class="galeria-port">
+                    {% for movie in movies %}
                     <div class="imagen-port">
-                        <img src="{% static 'Img/breaking.jpg' %}" alt="">
+                        <img src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" alt="{{ movie.title }}">
                         <div class="hover-galeria">
                             <img src="" alt="">
-                            <p>Nuestro trabajo</p>
+                           
                         </div>
                     </div>
-                    <div class="imagen-port">
-                        <img src="{% static 'Img/dragon.jpg' %}" alt="">
-                        <div class="hover-galeria">
-                            <img src="" alt="">
-                            <p>Nuestro trabajo</p>
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="{% static 'Img/scarface.jpg' %}" alt="">
-                        <div class="hover-galeria">
-                            <img src="" alt="">
-                            <p>Nuestro trabajo</p>
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="{% static 'Img/rapidoy.jpg' %}" alt="">
-                        <div class="hover-galeria">
-                            <img src="" alt="">
-                            <p>Nuestro trabajo</p>
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="{% static 'Img/monja2.jpg' %}" alt="">
-                        <div class="hover-galeria">
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="{% static 'Img/blanca nieves.png' %}" alt="">
-                        <div class="hover-galeria">
-
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="{% static 'Img/Thewarriorscover.jpg' %}" alt="">
-                        <div class="hover-galeria">
-                        </div>
-                    </div>
-                    <div class="imagen-port">
-                        <img src="{% static 'Img/image.jpg' %}" alt="">
-                        <div class="hover-galeria">
-                        </div>
-                    </div>
-                    
+                    {% endfor %}
                 </div>
             </div>
         </section>
    
     </section>
-    <<section class="about-services">
+    <section class="about-services">
         <div class="contenedor">
             <h2 class="titulo">nuestros servicios</h2>
             <div class="servicio-cont">
@@ -125,9 +83,15 @@
             </div>
         </div>
         <h2 class="titulo-final">&copy;CineAdicto | PalacyCompany</h2>
+        <div class="criticas">
+            <form action="#" method="post">
+                <textarea name="critica" id="critica" cols="30" rows="5" placeholder="Déjanos tu crítica o sugerencia"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>        
     </footer>
 </body>
 </html>
-    {% endblock %}
+{% endblock %}
 </body>
 </html>

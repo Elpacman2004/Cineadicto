@@ -25,12 +25,12 @@
         <div class="contenedorL">
             <div class="formulario">
                 <form method='POST'>
-                    <h2>Iniciar Sesion</h2>
-
-                    <p class='Error'><center>{{'Error'}}</center></p>
 
                     {% csrf_token %}
 
+                    
+                    <h2>Iniciar Sesión</h2>
+                    <center><p class='Error'>{{Error}}<p></center>
                     <div class="input-contenedor">
                         <input type="text" name="username" class="input-contenedor" maxlength="250" required="" id="id_username">
                         <label for="id_username">Nombre de usuario:</label>

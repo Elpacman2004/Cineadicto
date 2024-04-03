@@ -22,8 +22,14 @@
                     <div class="movie-card">
                         <!-- Agregar la imagen de la película -->
                         <img src="{{ pelicula.imagen_url }}" alt="{{ pelicula.title }}">
+                        <!-- Agregar el título de la película -->
                         <h3>{{ pelicula.title }}</h3>
+                        <!-- Agregar la descripción de la película -->
                         <p>{{ pelicula.overview }}</p>
+                        <!-- Agregar la calificación de la película -->
+                        <p>Calificación: {{ pelicula.vote_average }}</p>
+                        <!-- Agregar el año de lanzamiento de la película -->
+                        <p>Año de lanzamiento: {{ pelicula.release_date }}</p>
                         <!-- Agregar un enlace para ver el trailer de la película -->
                         {% if pelicula.trailer_url %}
                             <a href="{{ pelicula.trailer_url }}" target="_blank">Ver trailer</a>
